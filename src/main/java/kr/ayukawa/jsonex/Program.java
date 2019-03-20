@@ -15,6 +15,8 @@ public class Program {
 	private final Logger logger = LoggerFactory.getLogger(this.getClass().getName());
 
 	public void execute() {
+		logger.info("프로그램 시작");
+
 		// 직원을 4명 만든다
 		Employee emp1 = new Employee(1, "홍길동", 27, 10000.0);
 		Employee emp2 = new Employee(2, "강감찬", 25, 10500.0);
@@ -74,6 +76,8 @@ public class Program {
 		} catch(Exception e) {
 			logger.error("", e);
 		}
+
+		logger.info("프로그램 종료");
 	}
 
 	public static void main(String[] args) {
