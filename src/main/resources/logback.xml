@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<appender name="consoleToJson" class="ch.qos.logback.core.ConsoleAppender">
+		<layout class="ch.qos.logback.contrib.json.classic.JsonLayout">
+			<jsonParameter class="ch.qos.logback.contrib.jackson.JacksonJsonFormatter">
+				<prettyPrint>true</prettyPrint>
+			</jsonParameter>
+			<timestampFormat>yyyy-MM-dd' 'HH:mm:ss.SSS</timestampFormat>
+		</layout>
+	</appender>
+
+	<root level="ALL">
+		<appender-ref ref="consoleToJson" />
+	</root>
+</configuration>
